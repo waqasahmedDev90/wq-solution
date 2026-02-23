@@ -1,0 +1,56 @@
+import teamDetailImg from "@/assets/img/team/details-1.jpg";
+
+export default function TeamDetailsSection() {
+    return (
+        <section className="team-details-section fix section-padding pb-0">
+            <div className="container">
+                <div className="team-details-wrapper">
+                    <div className="team-details-items">
+                        <div className="thumb">
+                            <img src={teamDetailImg} alt="img"/>
+                        </div>
+                        <div className="content">
+                            <div className="cont">
+                                <h4>Kenneth Z. Burke</h4>
+                                <span>Gemini market</span>
+                            </div>
+                            <p className="mb-3">
+                                Prior to joining company, she spent 20+ years at Inmosys, where he held a wide range of
+                                global leadership roles, from services to products, and across operations and sales.
+                                Most recently, he was SVP & Global Head of the Manufacturing business..
+                            </p>
+                            <p>
+                                as well as a board member of their software subsidiary. He is also an avid cook and
+                                history buff. You can find him dining late at night with the chefs of the hotels where
+                                he stays during his travels
+                            </p>
+                            <div className="team-contact-info">
+                                <div className="icon-items">
+                                    <div className="icon">
+                                        <i className="fa-sharp fa-solid fa-phone-volume"></i>
+                                    </div>
+                                    <h5><a href="tel:+9156980036420">+91 5698 0036 420</a></h5>
+                                </div>
+                                <div className="icon-items">
+                                    <div className="icon">
+                                        <i className="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <h5><a href="mailto:info@example.com">info@example.com</a></h5>
+                                </div>
+                                <div className="icon-items">
+                                    <div className="icon">
+                                        <i className="fa-sharp fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <h5>
+                                        <a href="https://www.google.com/maps/place/Egens+Lab/@23.8340712,90.3631117,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c14c8682a473:0xa6c74743d52adb88!8m2!3d23.8340663!4d90.3656866!16s%2Fg%2F11rs9vlwsk?entry=ttu">26
+                                            Manor St, Braintree UK</a>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}

@@ -1,0 +1,104 @@
+import cartImg from "@/assets/img/product/cart.jpg";
+import { Link } from 'react-router-dom';
+
+export default function ShopCartSection() {
+    return (
+        <section className="cart-section section-padding">
+            <div className="container">
+                <div className="main-cart-wrapper">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="cart-wrapper">
+                                <div className="cart-items-wrapper">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                            <th>Subtotal</th>
+                                            <th>Remove</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr className="cart-item">
+                                            <td className="cart-item-info">
+                                                <img src={cartImg} alt="Image"/>
+                                            </td>
+                                            <td className="cart-item-price">
+                                                $ <span className="base-price">325.00</span>
+                                            </td>
+                                            <td>
+                                                <div className="cart-item-quantity">
+                                                    <span className="cart-item-quantity-amount">1</span>
+                                                    <div className="cart-item-quantity-controller">
+                                                        <a href="#0" className="cart-increment">
+                                                            <i className="far fa-caret-up"></i>
+                                                        </a>
+                                                        <a href="#0" className="cart-decrement">
+                                                            <i className="far fa-caret-down"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td className="cart-item-price">
+                                                $ <span className="total-price"></span>
+                                            </td>
+                                            <td className="cart-item-remove">
+                                                <a href="#0">
+                                                    <i className="fas fa-times"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div className="cart-wrapper-footer">
+                                    <form action="/shop-cart">
+                                        <input type="text" name="promo-code" id="promoCode" placeholder="Promo code"/>
+                                        <button type="submit" className="theme-btn">
+                                            Apply Code
+                                        </button>
+                                    </form>
+                                    <Link to="/shop-cart" className="theme-btn">
+                                        Update Cart
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-6"></div>
+                        <div className="col-xl-6">
+                            <div className="cart-pragh-box">
+                                <div className="cart-graph">
+                                    <h4>Cart Total</h4>
+                                    <ul>
+                                        <li>
+                                            <span>Subtotal</span>
+                                            <span>$510.00</span>
+                                        </li>
+                                        <li>
+                                            <span>Shipping</span>
+                                            <span>$10</span>
+                                        </li>
+                                        <li>
+                                            <span>Total</span>
+                                            <span>$510.00</span>
+                                        </li>
+                                    </ul>
+                                    <div className="chck">
+                                        <Link to="/checkout" className="theme-btn">
+                                            Checkout
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
