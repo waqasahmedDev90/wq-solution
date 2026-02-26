@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Fancybox } from "@fancyapps/ui";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 // GSAP Imports
@@ -23,27 +24,48 @@ export default function HeroSectionThree() {
   useGSAP(
     () => {
       const tl = gsap.timeline({
-        defaults: { ease: "power4.out", duration: 1.2 },
+        defaults: { ease: "power4.out", duration: 1 },
       });
 
-      // Left side content (Text, Buttons, Socials)
-      tl.from(".gsap-fade-up", {
-        y: 60,
-        opacity: 0,
-        stagger: 0.15,
-      })
-        // Right side (Video Box Glassmorphism)
-        .from(
+      // 1. Pehle ensure karein ke elements visible hone ke liye ready hon
+      gsap.set(".gsap-fade-up, .gsap-scale-in", { visibility: "visible" });
+
+      // 2. Left side content (Heading, Para, Buttons)
+      tl.fromTo(
+        ".gsap-fade-up",
+        {
+          y: 60,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.12,
+          duration: 1.2,
+          clearProps: "all", // Animation ke baad styles saaf taake CSS wapas control le le
+        },
+      )
+        // 3. Right side (Video Box / Image)
+        .fromTo(
           ".gsap-scale-in",
           {
             scale: 0.8,
             opacity: 0,
-            rotation: 2, // Halka sa ghoom kar aayega
+            rotation: 3,
+          },
+          {
+            scale: 1,
+            opacity: 1,
+            rotation: 0,
             duration: 1.5,
             ease: "elastic.out(1, 0.7)",
+            clearProps: "transform,opacity",
           },
-          "-=0.8", // Text ke sath hi start ho jayega
+          "-=1", // Content ke khatam hone se pehle shuru hoga
         );
+
+      // 4. Sab se zaroori: Neechay wale sections ke liye refresh
+      ScrollTrigger.refresh();
     },
     { scope: containerRef },
   );

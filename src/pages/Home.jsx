@@ -13,6 +13,8 @@ import PortfolioSection from "../components/sections/PortfolioSection";
 import ProcessSection from "../components/sections/ProcessSection";
 import ExpectationSection from "../components/sections/ExpectationSection";
 import TechStackSection from "../components/sections/TechStackSection";
+import WhyChooseUs from "../components/sections/WhyChooseUs";
+import TestimonialSection from "../components/sections/TestimonialSection";
 
 export default function Home() {
   return (
@@ -42,6 +44,8 @@ export default function Home() {
          <ProcessSection /> 
          <ExpectationSection />
          <TechStackSection />
+         <WhyChooseUs />
+         <TestimonialSection />
       
       {/*Service Section End*/}
 
