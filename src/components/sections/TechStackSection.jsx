@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Plus, CheckCircle2, ChevronRight } from "lucide-react";
+import { Plus, ChevronRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,9 +12,22 @@ const techData = [
     category: "Website Development",
     desc: "Build rapid, secure, and future-proof websites using modern frameworks.",
     stacks: [
-      { name: "Frontend", tools: ["React.js", "Angular", "Vue.js", "HTML5", "CSS3"] },
-      { name: "Backend", tools: ["Node.js", "Python", "Django", "PHP", "Laravel"] },
-      { name: "CMS", tools: ["WordPress", "Webflow"] }
+      { 
+        name: "Frontend", 
+        tools: [
+          { name: "React", img: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
+          { name: "Angular", img: "https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg" },
+          { name: "Vue.js", img: "https://cdn.worldvectorlogo.com/logos/vue-9.svg" },
+          { name: "HTML5", img: "https://cdn.worldvectorlogo.com/logos/html-1.svg" }
+        ] 
+      },
+      { 
+        name: "Backend", 
+        tools: [
+          { name: "Node.js", img: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" },
+          { name: "Laravel", img: "https://cdn.worldvectorlogo.com/logos/laravel-2.svg" }
+        ] 
+      }
     ]
   },
   {
@@ -22,8 +35,14 @@ const techData = [
     category: "UI/UX Design",
     desc: "Crafting intuitive digital experiences that feel like second nature.",
     stacks: [
-      { name: "Prototyping", tools: ["Figma", "Adobe XD", "Sketch"] },
-      { name: "Handoff", tools: ["InVision", "Zeplin", "Miro"] }
+      { 
+        name: "Prototyping", 
+        tools: [
+          { name: "Figma", img: "https://cdn.worldvectorlogo.com/logos/figma-5.svg" },
+          { name: "Adobe XD", img: "https://cdn.worldvectorlogo.com/logos/adobe-xd-2.svg" },
+          { name: "Sketch", img: "https://cdn.worldvectorlogo.com/logos/sketch-2.svg" }
+        ] 
+      }
     ]
   },
   {
@@ -31,8 +50,14 @@ const techData = [
     category: "Graphic Design",
     desc: "Striking visual identities that demand attention and communicate value.",
     stacks: [
-      { name: "Creative Suite", tools: ["Photoshop", "Illustrator", "InDesign"] },
-      { name: "Motion", tools: ["After Effects", "Premiere Pro"] }
+      { 
+        name: "Creative Suite", 
+        tools: [
+          { name: "Photoshop", img: "https://cdn.worldvectorlogo.com/logos/adobe-photoshop-2.svg" },
+          { name: "Illustrator", img: "https://cdn.worldvectorlogo.com/logos/adobe-illustrator-cc-icon.svg" },
+          { name: "After Effects", img: "https://cdn.worldvectorlogo.com/logos/after-effects-cc-logo.svg" }
+        ] 
+      }
     ]
   },
   {
@@ -40,8 +65,14 @@ const techData = [
     category: "Digital Marketing",
     desc: "Targeted campaigns and analytics to drive organic growth and ROI.",
     stacks: [
-      { name: "Analytics", tools: ["GA4", "GTM", "Search Console"] },
-      { name: "Ads", tools: ["Meta Ads", "Google Ads", "HubSpot"] }
+      { 
+        name: "Analytics & Ads", 
+        tools: [
+          { name: "GA4", img: "https://cdn.worldvectorlogo.com/logos/google-analytics-4.svg" },
+          { name: "Meta Ads", img: "https://cdn.worldvectorlogo.com/logos/meta-1.svg" },
+          { name: "Google Ads", img: "https://cdn.worldvectorlogo.com/logos/google-ads-1.svg" }
+        ] 
+      }
     ]
   },
   {
@@ -49,51 +80,90 @@ const techData = [
     category: "E-Commerce",
     desc: "Secure, lightning-fast stores built for frictionless checkout.",
     stacks: [
-      { name: "Platforms", tools: ["Shopify", "WooCommerce", "Magento"] },
-      { name: "Payments", tools: ["Stripe", "PayPal", "Square"] }
+      { 
+        name: "Platforms", 
+        tools: [
+          { name: "Shopify", img: "https://cdn.worldvectorlogo.com/logos/shopify-logo.svg" },
+          { name: "WooCommerce", img: "https://cdn.worldvectorlogo.com/logos/woocommerce-icon.svg" },
+          { name: "Stripe", img: "https://cdn.worldvectorlogo.com/logos/stripe-4.svg" }
+        ] 
+      }
     ]
   },
   {
     id: 6,
     category: "App Development",
-    desc: "High-performing applications for iOS and Android user home screens.",
+    desc: "High-performing applications for iOS and Android.",
     stacks: [
-      { name: "Mobile", tools: ["Flutter", "React Native", "Swift", "Kotlin"] },
-      { name: "BaaS", tools: ["Firebase", "Supabase"] }
+      { 
+        name: "Mobile Stack", 
+        tools: [
+          { name: "Flutter", img: "https://cdn.worldvectorlogo.com/logos/flutter-logo.svg" },
+          { name: "React Native", img: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
+          { name: "Firebase", img: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg" }
+        ] 
+      }
     ]
   },
   {
     id: 7,
     category: "Custom Software",
-    desc: "Automate innovative processes and reduce human error with bespoke tools.",
+    desc: "Bespoke tools to automate workflows and reduce error.",
     stacks: [
-      { name: "Databases", tools: ["MySQL", "PostgreSQL", "MongoDB"] },
-      { name: "Cloud/DevOps", tools: ["AWS", "GCP", "Azure", "Docker", "Kubernetes"] }
+      { 
+        name: "Cloud & DB", 
+        tools: [
+          { name: "AWS", img: "https://cdn.worldvectorlogo.com/logos/amazon-web-services-2.svg" },
+          { name: "Docker", img: "https://cdn.worldvectorlogo.com/logos/docker-3.svg" },
+          { name: "MongoDB", img: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" }
+        ] 
+      }
     ]
   }
 ];
 
 export default function TechStackSection() {
-  const [openId, setOpenId] = useState(1);
+ const [openId, setOpenId] = useState(1);
   const containerRef = useRef(null);
 
   useGSAP(() => {
-    gsap.from(".tech-reveal", {
-      opacity: 1,
-      y: 30,
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 80%",
-      }
-    });
+    // 1. Pehle check karein ke elements render ho chuke hain
+    const items = gsap.utils.toArray(".tech-reveal");
+    
+    if (items.length > 0) {
+      // 2. fromTo use karein: Forcefully 0 se 1 par le jayen
+      gsap.fromTo(items, 
+        { 
+          opacity: 0, 
+          y: 40 
+        }, 
+        { 
+          opacity: 1, 
+          y: 0, 
+          stagger: 0.15, 
+          duration: 1, 
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 85%", // Jab section ka top 85% screen par ho
+            toggleActions: "play none none none", // Sirf ek baar chalay ga
+          },
+          // 3. Animation khatam hone par opacity ko '1' par lock kar dega
+          onComplete: () => gsap.set(items, { clearProps: "all" })
+        }
+      );
+
+      // 4. Sab se zaroori: Reload ke masle ke liye
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
+    }
   }, { scope: containerRef });
 
   return (
     <section id="technology" ref={containerRef} className="py-28 bg-[#020617] !text-white overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
         
-        {/* HEADER SECTION */}
         <div className="max-w-4xl mb-24 tech-reveal">
           <h2 className="text-4xl lg:text-7xl font-black mb-6 tracking-tight">
             Powered by <br />
@@ -102,11 +172,10 @@ export default function TechStackSection() {
             </span>
           </h2>
           <p className="text-slate-400 text-lg lg:text-xl font-medium max-w-2xl">
-            We build rapid, secure, and future-proof digital solutions using the most advanced tech stacks available today.
+            We build rapid, secure, and future-proof digital solutions using the most advanced tech stacks.
           </p>
         </div>
 
-        {/* ACCORDION DASHBOARD */}
         <div className="flex flex-col gap-4 max-w-6xl mx-auto">
           {techData.map((item) => {
             const isOpen = openId === item.id;
@@ -114,10 +183,9 @@ export default function TechStackSection() {
               <div 
                 key={item.id} 
                 className={`tech-reveal border rounded-[2rem] transition-all duration-700 overflow-hidden ${
-                  isOpen ? "bg-slate-900/50 border-blue-500/30" : "bg-slate-900/20 border-slate-800/50"
+                  isOpen ? "bg-slate-900/50 border-blue-500/30 shadow-[0_0_50px_rgba(37,99,235,0.1)]" : "bg-slate-900/20 border-slate-800/50"
                 }`}
               >
-                {/* CATEGORY BAR */}
                 <button 
                   onClick={() => setOpenId(isOpen ? null : item.id)}
                   className="w-full flex items-center justify-between p-6 lg:p-8 text-left"
@@ -135,10 +203,8 @@ export default function TechStackSection() {
                   </div>
                 </button>
 
-                {/* EXPANDABLE CONTENT AREA */}
-                <div className={`transition-all duration-700 ease-in-out ${isOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}>
+                <div className={`transition-all duration-700 ease-in-out ${isOpen ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"}`}>
                   <div className="p-8 lg:p-12 pt-0 border-t border-slate-800/50">
-                    
                     <p className="text-slate-400 text-lg mb-10 max-w-2xl leading-relaxed">
                        {item.desc}
                     </p>
@@ -151,22 +217,28 @@ export default function TechStackSection() {
                              {stack.name}
                            </h5>
                            
-                           {/* TOOLS GRID - Official Style */}
-                           <div className="flex flex-wrap gap-4">
+                           <div className="flex flex-wrap gap-4 lg:gap-6">
                              {stack.tools.map((tool, i) => (
                                <div 
                                  key={i} 
-                                 className="group relative flex items-center justify-center p-4 min-w-[120px] lg:min-w-[140px] h-20 rounded-2xl bg-[#020617] border border-slate-800 hover:border-blue-500/50 transition-all duration-300 shadow-xl"
+                                 className="group relative flex flex-col items-center justify-center p-4 min-w-[100px] lg:min-w-[120px] h-32 rounded-2xl bg-slate-950/50 border border-slate-800 hover:border-blue-500/50 transition-all duration-500 shadow-xl"
                                >
-                                 {/* Hover Glow Background */}
-                                 <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                                 <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none"></div>
                                  
-                                 <div className="relative z-10 flex flex-col items-center gap-2">
-                                   <div className="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)] opacity-20 group-hover:opacity-100 transition-opacity"></div>
-                                   <span className="text-xs lg:text-sm font-bold !text-slate-300 group-hover:!text-white transition-colors uppercase tracking-widest">
-                                     {tool}
-                                   </span>
+                                 {/* IMAGE HANDLING FIX */}
+                                 <div className="relative z-10 w-12 h-12 mb-3 flex items-center justify-center">
+                                   <img 
+                                     src={tool.img} 
+                                     alt={tool.name} 
+                                     className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500" 
+                                   />
                                  </div>
+                                 
+                                 <span className="relative z-10 text-[10px] lg:text-xs font-black uppercase tracking-tighter !text-slate-500 group-hover:!text-white transition-colors text-center">
+                                   {tool.name}
+                                 </span>
+
+                                 <div className="absolute bottom-2 w-1 h-1 rounded-full bg-blue-500 opacity-0 group-hover:opacity-100 group-hover:shadow-[0_0_8px_#3b82f6] transition-all"></div>
                                </div>
                              ))}
                            </div>
@@ -179,14 +251,12 @@ export default function TechStackSection() {
                          Deploy My Solution <ChevronRight className="w-4 h-4" />
                        </button>
                     </div>
-
                   </div>
                 </div>
               </div>
             );
           })}
         </div>
-
       </div>
     </section>
   );
