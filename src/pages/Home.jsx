@@ -9,54 +9,54 @@ import FaqSectionOne from "@/components/sections/FaqSectionOne";
 import TestimonialSectionThree from "@/components/sections/TestimonialSectionThree";
 import NewsSectionThree from "@/components/sections/NewsSectionThree";
 import AboutSectionFive from "@/components/sections/AboutSectionFive";
+import PortfolioSection from "../components/sections/PortfolioSection";
 
 export default function Home() {
-    return (
-      <>
-        {/*Hero Section Start*/}
+  return (
+    <>
+      {/*Hero Section Start*/}
+      <div className="relative z-0 bg-[#020617] min-h-screen">
         <HeroSectionThree />
-        {/*Hero Section End*/}
+      </div>
 
-        {/*Brand Section Start*/}
-        {/* <BrandSection /> */}
-        {/*Brand Section End*/}
-
-        {/*About Section Start*/}
+      {/* About Section - Upar charhay ga */}
+      <div className="relative z-10 bg-[#020617]">
         <AboutSectionFive />
-        {/*About Section End*/}
+      </div>
 
-        {/*Marquee Section Start*/}
-        {/* <MarqueeSectionThree /> */}
-        {/*Marquee Section End*/}
-
-        {/*Service Section Start*/}
+      {/* Service Section - Iski sticky images Hero ke upar na jayen */}
+      <div className="relative z-20 bg-[#020617]">
         <ServiceSectionThree />
-        {/*Service Section End*/}
+      </div>
 
-        {/*Team Section Start*/}
-        {/* <TeamSectionThree /> */}
-        {/*Team Section End*/}
+      {/* Portfolio Section - Sab se upar aur clear */}
+      <div className="relative z-30 bg-[#020617]">
+        <PortfolioSection />
+      </div>
+      {/*Service Section End*/}
 
-        {/*Cta Section Start*/}
-        {/* <CtaSectionTwo /> */}
-        {/*Cta Section End*/}
+      {/*Team Section Start*/}
+      {/*Team Section End*/}
 
-        {/*Project Section Start*/}
-        {/* <ProjectSectionThree /> */}
-        {/*Project Section end*/}
+      {/*Cta Section Start*/}
+      {/* <CtaSectionTwo /> */}
+      {/*Cta Section End*/}
 
-        {/*Faq Section start*/}
-        {/* <FaqSectionOne /> */}
-        {/*Faq Section end*/}
+      {/*Project Section Start*/}
+      {/* <ProjectSectionThree /> */}
+      {/*Project Section end*/}
 
-        {/*Testimonial Section Start*/}
-        {/* <TestimonialSectionThree /> */}
-        {/*Testimonial Section End*/}
+      {/*Faq Section start*/}
+      {/* <FaqSectionOne /> */}
+      {/*Faq Section end*/}
 
-        {/*News Section Start*/}
-        {/* <NewsSectionThree /> */}
-        {/*News Section End*/}
-      </>
-    );
-  }
-  
+      {/*Testimonial Section Start*/}
+      {/* <TestimonialSectionThree /> */}
+      {/*Testimonial Section End*/}
+
+      {/*News Section Start*/}
+      {/* <NewsSectionThree /> */}
+      {/*News Section End*/}
+    </>
+  );
+}
