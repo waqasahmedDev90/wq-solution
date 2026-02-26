@@ -180,7 +180,9 @@ Version: 1.0.0
   --bs-form-invalid-color: #dc3545;
   --bs-form-invalid-border-color: #dc3545;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 /* Phone Input Dark Theme Customization */
 .PhoneInputInput {
   background: transparent !important;
