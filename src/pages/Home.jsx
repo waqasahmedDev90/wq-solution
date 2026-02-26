@@ -10,6 +10,9 @@ import TestimonialSectionThree from "@/components/sections/TestimonialSectionThr
 import NewsSectionThree from "@/components/sections/NewsSectionThree";
 import AboutSectionFive from "@/components/sections/AboutSectionFive";
 import PortfolioSection from "../components/sections/PortfolioSection";
+import ProcessSection from "../components/sections/ProcessSection";
+import ExpectationSection from "../components/sections/ExpectationSection";
+import TechStackSection from "../components/sections/TechStackSection";
 
 export default function Home() {
   return (
@@ -33,6 +36,13 @@ export default function Home() {
       <div className="relative z-30 bg-[#020617]">
         <PortfolioSection />
       </div>
+      
+
+      
+         <ProcessSection /> 
+         <ExpectationSection />
+         <TechStackSection />
+      
       {/*Service Section End*/}
 
       {/*Team Section Start*/}
