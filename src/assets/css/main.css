@@ -181,6 +181,34 @@ Version: 1.0.0
   --bs-form-invalid-border-color: #dc3545;
 }
 
+/* Phone Input Dark Theme Customization */
+.PhoneInputInput {
+  background: transparent !important;
+  border: none !important;
+  color: white !important;
+  outline: none !important;
+  width: 100%;
+}
+
+.PhoneInputCountry {
+  margin-right: 12px;
+}
+
+.PhoneInputCountrySelectArrow {
+  opacity: 0.5;
+  color: white !important;
+}
+
+/* YEH CODE SAFED DABBE KO DARK KAREGA 👇 */
+.PhoneInputCountrySelect {
+  background-color: #0f172a !important; /* Dark Slate background */
+  color: white !important; /* Safed text */
+}
+
+.PhoneInputCountrySelect option {
+  background-color: #0f172a !important;
+  color: white !important;
+}
 [data-bs-theme=dark] {
   color-scheme: dark;
   --bs-body-color: #dee2e6;

@@ -15,6 +15,8 @@ import ExpectationSection from "../components/sections/ExpectationSection";
 import TechStackSection from "../components/sections/TechStackSection";
 import WhyChooseUs from "../components/sections/WhyChooseUs";
 import TestimonialSection from "../components/sections/TestimonialSection";
+import CtaSection from "../components/sections/CtaSection";
+import ContactSection from "../components/sections/ContactSection";
 
 export default function Home() {
   return (
@@ -46,31 +48,10 @@ export default function Home() {
          <TechStackSection />
          <WhyChooseUs />
          <TestimonialSection />
+         <CtaSection />
+         <ContactSection />
       
-      {/*Service Section End*/}
-
-      {/*Team Section Start*/}
-      {/*Team Section End*/}
-
-      {/*Cta Section Start*/}
-      {/* <CtaSectionTwo /> */}
-      {/*Cta Section End*/}
-
-      {/*Project Section Start*/}
-      {/* <ProjectSectionThree /> */}
-      {/*Project Section end*/}
-
-      {/*Faq Section start*/}
-      {/* <FaqSectionOne /> */}
-      {/*Faq Section end*/}
-
-      {/*Testimonial Section Start*/}
-      {/* <TestimonialSectionThree /> */}
-      {/*Testimonial Section End*/}
-
-      {/*News Section Start*/}
-      {/* <NewsSectionThree /> */}
-      {/*News Section End*/}
+      
     </>
   );
 }

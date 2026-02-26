@@ -65,7 +65,7 @@ export default function HeroSectionThree() {
         );
 
       // 4. Sab se zaroori: Neechay wale sections ke liye refresh
-      ScrollTrigger.refresh();
+      gsap.registerPlugin(ScrollTrigger);
     },
     { scope: containerRef },
   );
