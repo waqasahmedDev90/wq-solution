@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Fancybox } from "@fancyapps/ui";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import { PrimaryButton, SecondaryButton } from "./../Button";
 
 // GSAP Imports
 import gsap from "gsap";
@@ -108,8 +109,12 @@ export default function HeroSectionThree() {
             {/* Buttons Group (Tailwind Design) */}
             {/* Buttons Group (Tailwind Design) */}
             <div className="gsap-fade-up flex flex-wrap items-center gap-5 mb-14">
+              <PrimaryButton href="#contact" className="w-full sm:w-auto">
+                Let's Talk Strategy
+              </PrimaryButton>
+
               {/* Primary Button */}
-              <Link
+              {/* <Link
                 to="/contact"
                 className="group flex items-center gap-3 bg-blue-600 !text-white px-8 py-4 rounded-full font-sans font-bold text-base transition-all duration-300 hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:-translate-y-1 before:!hidden after:!hidden"
               >
@@ -117,16 +122,24 @@ export default function HeroSectionThree() {
                 <span className="flex items-center justify-center bg-white !text-blue-600 rounded-full w-8 h-8 transition-transform duration-300 group-hover:translate-x-1 before:!hidden after:!hidden">
                   <i className="icon-arrow-right"></i>
                 </span>
-              </Link>
+              </Link> */}
 
               {/* Secondary Button */}
-              <Link
+              {/* <Link
                 to="/services"
                 className="group flex items-center justify-center gap-3 bg-white/5 border border-white/20 !text-white px-8 py-4 rounded-full font-sans font-bold text-base backdrop-blur-sm transition-all duration-300 hover:!bg-white hover:!text-slate-900 hover:border-white hover:-translate-y-1 before:!hidden after:!hidden"
               >
                 Explore Our Services
                 <i className="icon-arrow-right transition-transform duration-300 group-hover:translate-x-1 before:!hidden after:!hidden"></i>
-              </Link>
+              </Link> */}
+
+              <SecondaryButton
+                href="#services"
+                className="w-full sm:w-auto"
+                showIcon={false}
+              >
+                Explore Our Services
+              </SecondaryButton>
             </div>
 
             {/* Social Icons (Modern Row) */}

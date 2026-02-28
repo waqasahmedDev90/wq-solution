@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { AlertTriangle, CheckCircle2, Quote, ChevronRight, HelpCircle } from "lucide-react";
+import { PrimaryButton } from "../Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -199,9 +200,13 @@ export default function ServicesSection() {
                   ))}
                 </div>
 
-                <a href="#contact" className="inline-flex items-center gap-2 !text-white font-bold bg-blue-600 px-6 py-3 rounded-full hover:bg-blue-500 transition-colors">
+                {/* <a href="#contact" className="inline-flex items-center gap-2 !text-white font-bold bg-blue-600 px-6 py-3 rounded-full hover:bg-blue-500 transition-colors">
                    {service.ctaText} <ChevronRight className="w-4 h-4" />
-                </a>
+                </a> */}
+
+                <PrimaryButton href="#contact" className="w-full sm:w-auto">
+  {service.ctaText}
+</PrimaryButton>
               </div>
             ))}
           </div>
