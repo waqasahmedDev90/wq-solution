@@ -97,6 +97,7 @@ export default function ServicesSection() {
   const [activeImage, setActiveImage] = useState(servicesData[0].image);
 
   useGSAP(() => {
+    // 1. Initial Reveal Animation (Aapka purana code)
     gsap.fromTo(".service-content-block", 
       { opacity: 0, y: 30 },
       { 
@@ -110,6 +111,20 @@ export default function ServicesSection() {
         }
       }
     );
+
+    // 2. NAYA CODE: Scroll par Image Change karne ka logic
+    const blocks = gsap.utils.toArray(".service-content-block");
+    blocks.forEach((block, index) => {
+      ScrollTrigger.create({
+        trigger: block,
+        // Jab block screen ke center (50%) par pohnchega toh trigger hoga
+        start: "top 50%", 
+        end: "bottom 50%",
+        onEnter: () => setActiveImage(servicesData[index].image), // Neechay scroll karte waqt
+        onEnterBack: () => setActiveImage(servicesData[index].image), // Upar scroll karte waqt
+      });
+    });
+
   }, { scope: containerRef });
 
   return (
@@ -151,7 +166,7 @@ export default function ServicesSection() {
             {servicesData.map((service) => (
               <div 
                 key={service.id}
-                onMouseEnter={() => setActiveImage(service.image)}
+                onMouseEnter={() => setActiveImage(service.image)} // Hover wala function bhi rakha hai extra smoothness ke liye
                 className="service-content-block p-8 rounded-3xl bg-slate-900/40 border border-slate-800 hover:border-blue-500/50 transition-all duration-300 group"
               >
                 <div className="flex items-center gap-4 mb-6">

@@ -90,9 +90,9 @@ export default function HeroSectionThree() {
             </div>
 
             {/* Main Heading with Gradient Text */}
-            <h1 className="gsap-fade-up text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-8">
+            <h1 className="gsap-fade-up text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-8 font-heading">
               Build a Powerful, <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500">
+              <span className="font-heading text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500">
                 Trustworthy Digital
               </span>{" "}
               Presence.
