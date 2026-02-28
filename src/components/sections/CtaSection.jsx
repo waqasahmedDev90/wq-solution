@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { PrimaryButton } from "../Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,7 +79,7 @@ export default function CtaSection() {
           {/* Normal Sized Headline (Changed from 8xl to 4xl/5xl) */}
           <h2 className="text-3xl md:text-5xl font-extrabold mb-5 leading-tight tracking-tight !text-white">
             Let’s Map Out <br className="hidden sm:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500">
               Your Growth.
             </span>
           </h2>
@@ -88,14 +89,9 @@ export default function CtaSection() {
             Partner with a centralized team that provides future-proof web, app, and marketing solutions designed to supercharge growth.
           </p>
 
-          {/* Standard Professional Button */}
-          <button
-            onClick={handleScrollToContact}
-            className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-blue-600 !text-white font-semibold text-sm transition-all duration-300 hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
-          >
-            Start Your Project Today
-            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          </button>
+
+        <PrimaryButton onClick={handleScrollToContact}>Start Your Project Today </PrimaryButton>
+        
           
         </div>
       </div>

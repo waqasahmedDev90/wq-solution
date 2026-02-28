@@ -67,9 +67,9 @@ export default function TestimonialSection() {
             <h6 className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 !text-blue-400 font-bold text-xs uppercase mb-6">
               <CheckCircle size={14} /> Trust Factor
             </h6>
-            <h2 className="text-4xl lg:text-5xl font-black mb-6 leading-tight">
+            <h2 className="text-4xl lg:text-[45px] text-white mb-6 leading-tight">
               Global Brands <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Trust Our Work.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500">Trust Our Work.</span>
             </h2>
             <p className="text-slate-400 text-base leading-relaxed mb-8">
               We don't just deliver code; we deliver results that help businesses scale globally with confidence.

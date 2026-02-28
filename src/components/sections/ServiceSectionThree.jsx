@@ -175,7 +175,7 @@ export default function ServicesSection() {
                   <h3 className="text-2xl sm:text-3xl font-bold !text-white">{service.tabName}</h3>
                 </div>
 
-                <h4 className="text-lg font-bold !text-blue-400 mb-4">{service.teaserHeadline}</h4>
+                <h4 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 mb-4">{service.teaserHeadline}</h4>
                 <p className="!text-slate-400 mb-8 leading-relaxed">{service.hook}</p>
 
                 {/* PROBLEM/SOLUTION GRID */}
@@ -194,8 +194,8 @@ export default function ServicesSection() {
                 <div className="grid grid-cols-2 gap-3 mb-8">
                   {service.deliverables.map((item, i) => (
                     <div key={i} className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 !text-blue-500" />
-                      <span className="text-xs !text-slate-400">{item.title || item}</span>
+                      <CheckCircle2 className="w-4 h-4 !text-blue-500 " />
+                      <span className="text-[14px] !text-slate-400">{item.title || item}</span>
                     </div>
                   ))}
                 </div>

@@ -177,7 +177,7 @@ export default function TechStackSection() {
         <div className="max-w-4xl mb-24 tech-reveal">
           <h2 className="text-4xl lg:text-7xl font-black mb-6 tracking-tight text-white">
             Powered by <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9700FC] to-[#4F46E5]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500">
               Industry-Leading Tech.
             </span>
           </h2>

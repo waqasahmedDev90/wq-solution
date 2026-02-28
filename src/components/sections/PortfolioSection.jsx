@@ -64,7 +64,7 @@ export default function PortfolioSection() {
             Our Portfolio
           </h6>
           <h2 className="text-4xl lg:text-6xl font-black leading-tight !text-white">
-            Explore How we Transform Complex Ideas into <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Digital Experiences.</span>
+            Explore How we Transform Complex Ideas into <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500">Digital Experiences.</span>
           </h2>
         </div>
 

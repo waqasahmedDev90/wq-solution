@@ -154,7 +154,7 @@ export default function ContactSection() {
               </div>
               <h2 className="text-4xl lg:text-6xl font-black mb-6 leading-tight tracking-tight !text-white">
                 Let's Discuss Your <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500">
                   Next Big Idea.
                 </span>
               </h2>
@@ -398,7 +398,7 @@ export default function ContactSection() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="group w-full flex items-center justify-center gap-2 px-6 py-3.5 mt-2 rounded-xl bg-blue-600 hover:bg-blue-500 !text-white font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-blue-500/25"
+                className="group w-full flex items-center justify-center gap-2 px-6 py-3.5 mt-2 rounded-xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:bg-blue-500 !text-white font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-blue-500/25"
               >
                 Get My Free Quote
                 <Send

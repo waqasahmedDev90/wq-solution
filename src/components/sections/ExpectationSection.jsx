@@ -73,7 +73,7 @@ export default function ExpectationSection() {
           </div>
           <h2 className="text-4xl lg:text-6xl font-black !text-white leading-tight mb-6 tracking-tight">
             We go beyond writing code. <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500">
               Here is the value we bring.
             </span>
           </h2>
