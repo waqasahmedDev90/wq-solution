@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Menu, X, Command, ArrowRight } from "lucide-react";
+import { PrimaryButton } from "./Button";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -100,13 +101,15 @@ export default function Header() {
           {/* Buttons Area */}
           <div className="flex items-center gap-3 relative z-50">
             {/* Desktop CTA */}
-            <a 
+            {/* <a 
               href="#contact-form" 
               className="hidden lg:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-blue-600 text-white font-bold text-sm hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:-translate-y-0.5 transition-all duration-300 group"
             >
               Get a Quote
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </a>
+            </a> */}
+
+            <PrimaryButton href="#contact-form">Get a Quote</PrimaryButton>
 
             {/* Mobile Menu Toggle Button */}
             <button 

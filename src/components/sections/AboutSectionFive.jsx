@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { PrimaryButton } from "../Button";
+import { PrimaryButton, SecondaryButton } from "../Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -180,7 +180,7 @@ export default function AboutSection() {
         </div>
 
         {/* ================= PHILOSOPHY MODAL BUTTON ================= */}
-        <div className="about-fade-up flex justify-center mb-28">
+        <div className="about-fade-up flex justify-center mb-20">
           <button className="group flex items-center gap-3 !text-white font-semibold text-lg hover:!text-blue-400 transition-colors"></button>
           <PrimaryButton onClick={() => setIsModalOpen(true)}>
             Read Our Engineering Philosophy
@@ -188,36 +188,45 @@ export default function AboutSection() {
         </div>
 
         {/* ================= CALL TO ACTION (CTA) ================= */}
-        <div className="cta-box p-10 lg:p-16 rounded-[2.5rem] bg-gradient-to-br from-blue-700 via-blue-600 to-indigo-800 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-10 shadow-2xl border border-white/10">
+        <div className="cta-box p-10 lg:p-16 rounded-[2.5rem] bg-gradient-to-br from-[#1A0B2E] via-[#2A1152] to-[#140628] relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-10 shadow-2xl border border-[#9700FC]/30">
+          {/* Subtle Dotted Background Pattern */}
           <div
             className="absolute inset-0 opacity-10 pointer-events-none"
             style={{
               backgroundImage:
-                "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
-              backgroundSize: "24px 24px",
+                "radial-gradient(circle at 2px 2px, #9700FC 1px, transparent 0)",
+              backgroundSize: "32px 32px",
             }}
           ></div>
 
+          {/* Soft Glow behind the text */}
+          <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-[#6D00F1] rounded-full blur-[120px] opacity-20 pointer-events-none"></div>
+
+          {/* Text Content */}
           <div className="relative z-10 max-w-2xl text-center lg:text-left">
-            <h3 className="text-3xl lg:text-4xl font-extrabold !text-white mb-4">
+            <h3 className="text-3xl lg:text-4xl font-extrabold text-white mb-4 tracking-tight">
               Let’s evaluate your current setup.
             </h3>
-            <p className="!text-blue-100 text-lg">
+            <p className="text-[#D4B3FF] text-lg font-medium leading-relaxed">
               Bring us your inefficient workflows, an outdated website, or a
               brand-new app idea. We will architect the solution and transparent
               roadmap to build it.
             </p>
           </div>
 
+          {/* CTA Button */}
           <div className="relative z-10 whitespace-nowrap">
-            {/* Yahan <Link> ko hata kar Single Page ke liye <a> tag use kiya gaya hai */}
-            <a
+            {/* <a
               href="#contact"
-              className="inline-flex items-center gap-2 bg-white !text-blue-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-100 hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)] transition-all duration-300"
+              className="group inline-flex items-center gap-3 bg-white text-[#6D00F1] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 hover:scale-105 hover:shadow-[0_0_30px_rgba(151,0,252,0.4)] transition-all duration-300"
             >
               Free Technical Consultation
-              <i className="fa-solid fa-arrow-right ml-1"></i>
-            </a>
+              <div className="w-8 h-8 rounded-full bg-[#6D00F1]/10 flex items-center justify-center group-hover:bg-[#6D00F1] group-hover:text-white transition-colors duration-300">
+                <i className="fa-solid fa-arrow-right text-sm"></i>
+              </div>
+            </a> */}
+
+            <SecondaryButton> Free Technical Consultation</SecondaryButton>
           </div>
         </div>
       </div>
